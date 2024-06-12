@@ -2,7 +2,7 @@
 from django import forms
 from .models import Inventory
 from .models import Supplier
-from .models import Inbound
+from .models import Inbound, Outbound
 
 class ProductForm(forms.ModelForm):
     class Meta:
@@ -18,3 +18,8 @@ class InboundForm(forms.ModelForm):
     class Meta:
         model = Inbound
         fields = ['inbid', 'reference', 'date_received', 'product_sku', 'quantity', 'location', 'remarks']
+
+class OutboundForm(forms.ModelForm):
+    class Meta:
+        model = Outbound
+        fields = ['outid', 'reference', 'date_received', 'product_sku', 'quantity', 'location', 'remarks']
