@@ -1,0 +1,22 @@
+<!-- inventory/templates/inventory/search_products.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Products</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+    <form method="get" action="{% url 'search_products' %}">
+        <input type="text" name="query" placeholder="Search products..." value="{{ query }}">
+        <button type="submit">Search</button>
+    </form>
+    <ul>
+        {% comment %} {% for product in results %}
+            <li>
+                {{ product.name }} ({{ product.quantity }}) - <a href="{% url 'update_product' product.pk %}">Update</a>
+            </li>
+        {% endfor %} {% endcomment %}
+    </ul>
+    <a href="{% url 'view_products' %}">Back to Inventory</a>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!-- inventory/templates/inventory/update_product.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Product</title>
+</head>
+<body>
+    <h1>Update Product</h1>
+    <form method="post">
+        {% comment %} {% csrf_token %}
+        {{ form.as_p }} {% endcomment %}
+        <button type="submit">Update Product</button>
+    </form>
+    <a href="{% url 'view_products' %}">Back to Inventory</a>
+</body>
+</html>

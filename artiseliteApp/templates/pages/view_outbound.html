@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Outgoing Products</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>View Outgoing Products</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Supplier</th>
+                <th>Date Received</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% comment %} {% for incoming_product in incoming_products %}
+            <tr>
+                <td>{{ incoming_product.product.name }}</td>
+                <td>{{ incoming_product.quantity }}</td>
+                <td>{{ incoming_product.supplier.name }}</td>
+                <td>{{ incoming_product.date_received }}</td>
+            </tr>
+            {% endfor %} {% endcomment %}
+        </tbody>
+    </table>
+</body>
+</html>

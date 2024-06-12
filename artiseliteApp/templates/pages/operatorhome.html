@@ -1,0 +1,24 @@
+<!-- inventory/templates/inventory/home.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <style>
+        /* Custom CSS for centering the h1 heading */
+        .center-heading {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="center-heading mt-5">Welcome to the Inventory Management System, Operator</h1>
+        <div class="text-center mt-4">
+            <a href="{% url 'view_outgoing' %}" class="btn btn-primary mr-2">Outgoing Shipments</a>
+            <a href="{% url 'view_inbound' %}" class="btn btn-primary">Incoming Shipments</a>
+        </div>
+    </div>
+</body>
+</html>

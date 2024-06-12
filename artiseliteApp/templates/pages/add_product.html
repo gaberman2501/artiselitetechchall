@@ -1,0 +1,17 @@
+<!-- inventory/templates/inventory/add_product.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Product</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+    <h1 class="text-center">Add Product</h1>
+    <form method="post">
+        {% comment %} {% csrf_token %}
+        {{ form.as_p }} {% endcomment %}
+        <button type="submit">Add Product</button>
+    </form>
+    <a href="{% url 'view_products' %}">Back to Inventory</a>
+</body>
+</html>
